@@ -15,10 +15,16 @@ class QAExample(BaseModel):
 
 class JudgeResult(BaseModel):
     # TODO: Học viên định nghĩa các trường cần thiết cho kết quả đánh giá (score, reason, ...)
+    score: int
+    reason: str
     pass
 
 class ReflectionEntry(BaseModel):
     # TODO: Học viên định nghĩa các trường cần thiết cho một mục reflection (attempt_id, lesson, strategy, ...)
+    attempt_id: int
+    failure_reason: str
+    lesson: str
+    next_strategy: str  # agents.py đổi thành reflection.next_strategy
     pass
 
 class AttemptTrace(BaseModel):
